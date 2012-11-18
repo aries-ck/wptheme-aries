@@ -1,0 +1,12 @@
+/*
+Theme Name:     Aries Theme
+Theme URI:      http: //aries.ck.ua/
+Author: SPolischook
+Author URI: http://kotoblog.pp.ua/
+Description:    Дочерняя тема для темы Twenty Twelve
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template:       twentytwelve
+Version:        0.1.0
+*/
+@import url("../twentytwelve/style.css");
