@@ -10,3 +10,28 @@ Template:       twentytwelve
 Version:        0.1.0
 */
 @import url("../twentytwelve/style.css");
+
+#site-navigation {
+    float: right;
+    height: 200px;
+}
+.main-navigation .sub-nav-menu li {
+    margin: 0;
+    width: 100%;
+}
+.main-navigation {
+    margin-top: 0px;
+    border-bottom: 1px solid #EDEDED;
+}
+.main-navigation ul.nav-menu {
+    border-bottom: none;
+}
+.main-navigation li {
+    margin: 0 2.057142857rem 0 0;
+}
+.main-navigation li ul {
+    display: block;
+}
+.header-image {
+    float: left;
+}
