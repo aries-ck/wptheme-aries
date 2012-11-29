@@ -11,6 +11,9 @@ Version:        0.1.0
 */
 @import url("../twentytwelve/style.css");
 
+body .site {
+    margin-top: 20px;
+}
 #site-navigation {
     float: right;
     height: 200px;
@@ -31,6 +34,16 @@ Version:        0.1.0
 }
 .main-navigation li ul {
     display: block;
+}
+.main-navigation li ul li a {
+    background: none;
+    line-height: 1;
+    text-transform: none;
+    border-bottom: none;
+    padding: 0;
+}
+.main-navigation li ul li a:hover {
+    background: none;
 }
 .header-image {
     float: left;

@@ -15,7 +15,11 @@ class magomra_walker_nav_menu extends Walker_Nav_Menu {
              // The Loop
             while ( have_posts() ) : the_post();
                 $output.= '<li>';
+                $output.= '<a href="';
+                $output.= get_permalink();
+                $output.= '">';
                 $output.= the_title('','',false);
+                $output.= '</a>';
                 $output.= '</li>';
             endwhile;
 
