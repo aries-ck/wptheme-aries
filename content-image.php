@@ -9,19 +9,17 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <h1><?php the_title(); ?></h1>
 		<div class="entry-content another">
 			<?php
             global $more;
             $more = false;
-            the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ), false );
+            the_content( __( '', 'twentytwelve' ), false );
             $more = true;
             ?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-meta">
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
-				<h1><?php the_title(); ?></h1>
-			</a>
 			<?php if ( comments_open() ) : ?>
 			<div class="comments-link">
 				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
