@@ -12,7 +12,33 @@ Version:        0.1.0
 @import url("../twentytwelve/style.css");
 
 body .site {
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+body.custom-background {
+
+}
+img.header-image {
+    border-radius: 0;
+    box-shadow: none;
+}
+#page {
+    background: url(images/body-bg.png);
+}
+#slider-pro-1 {
+    padding-left: 25px;
+}
+h1, .archive-title {
+    font-size: 38.5px;
+    margin-bottom: 15px;
+}
+h1.entry-title {
+    font-size: 2.571428571rem;
+    font-size: 36px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 31.5px;
 }
 #site-navigation {
     float: right;
@@ -32,12 +58,31 @@ body .site {
 .main-navigation li {
     margin: 0 2.057142857rem 0 0;
 }
+.main-navigation li a {
+    line-height: 2.292307692;
+}
+/** menu item **/
+#menu-item-7 {
+    border-bottom: 2px solid #B3D68D;
+}
+#menu-item-8 {
+    border-bottom: 2px solid #9BC6D3;
+}
+#menu-item-9 {
+    border-bottom: 2px solid #de846f;
+}
+#menu-item-6 {
+    border-bottom: 2px solid #F3C045;
+}
+/** end menu item **/
+
 .main-navigation li ul {
     display: block;
+    padding-top: 6px
 }
 .main-navigation li ul li a {
     background: none;
-    line-height: 1;
+    line-height: 1.45em;
     text-transform: none;
     border-bottom: none;
     padding: 0;
@@ -45,6 +90,88 @@ body .site {
 .main-navigation li ul li a:hover {
     background: none;
 }
+#primary {
+    margin-top: 0px;
+}
+.site-content article {
+    margin-bottom: 0;
+}
+.nav-single {
+    visibility: hidden;
+    height: 0px;
+}
 .header-image {
     float: left;
 }
+.archive-header, .page-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#secondary {
+    line-height: 1.5em;
+}
+#text-2 {
+    height: 0px;
+    visibility: hidden;
+}
+footer[role="contentinfo"] {
+    margin-top: 0;
+}
+#map_canvas {
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+.site-info {
+    float: left;
+    width: 100%;
+    padding: 15px 0 10px 0;
+    border-top: 2px solid #CCC;
+}
+#wpadminbar {
+    display: none;
+}
+.price {
+    float: left;
+    padding-left: 75px;
+    height: 75px;
+    background: url(images/xls.png) no-repeat;
+}
+/* tab slide out */
+.slide-out-div {
+    padding: 20px;
+    width: 300px;
+    background: #F3F3F3;
+    border: 1px solid #E4E4E4;
+    z-index: 1000;
+}
+/* end tab slide out */
+/* footer contact */
+footer {
+    border-top: none;
+}
+#colophon ul {
+    font-size: 16px;
+    float: right;
+    margin-right: 10px;
+}
+#colophon ul li {
+    line-height: 2em;
+}
+#colophon ul li h2 {
+    clear: none;
+    border-bottom: 2px solid #9BC6D3;
+    font-size: 26px;
+}
+.phone {
+    padding-left: 30px;
+    background: url(images/phone-icon.png) no-repeat;
+}
+.address {
+    padding-left: 30px;
+    background: url(images/maps-icon.png) no-repeat;
+}
+.mail {
+    padding-left: 30px;
+    background: url(images/email-icon.png) no-repeat;
+}
+/* end footer contact */
