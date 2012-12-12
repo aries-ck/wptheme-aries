@@ -10,18 +10,34 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+
 	</div><!-- #main .wrapper -->
 <footer id="colophon" role="contentinfo" xmlns="http://www.w3.org/1999/html">
-        <div id="map_canvas" style="width:600px; height:250px; float: left"></div>
+    <div id="map_canvas" style="width:600px; height:200px; float: left"></div>
+    <ul>
+        <li>
+            <h2>Наши контакты</h2>
+        </li>
+        <li>
             <span class="address">Черкассы, Хрещатик, 195, оф. 412</span><br />
+        </li>
+        <li>
             <span class="phone">(0472) 544-346</span><br />
+        </li>
+        <li>
             <span class="phone">(0472) 458-208</span><br />
+        </li>
+        <li>
             <span class="phone">(0472) 50-50-52</span><br />
-            <span class="mail">aries@uch.net</span>
-		<div class="site-info">
+        </li>
+        <li>
+            <a href="mailto:Типография%20Aries%20&lt;aries@uch.net&gt;"><span class="mail">E-mail</span>
+        </li>
+    </ul>
+        <div class="site-info">
 			<?php do_action( 'twentytwelve_credits' ); ?>
 			<a hidden="true" href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
-            <a href="/" title="Типография Aries">© Рекламно полиграфичный центр Aries</a> |
+            <a href="<?php bloginfo( 'url' ); ?>" title="Типография Aries">© Рекламно полиграфичный центр Aries</a> |
             <a href="http://kotoblog.pp.ua" title="Сергей Полищук">Сергей Полищук</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
@@ -34,6 +50,7 @@
         var settings = {
             zoom: 15,
             center: latlng,
+            scrollwheel: false,
             mapTypeControl: true,
             mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
             navigationControl: true,
@@ -49,6 +66,27 @@
         });
     }
 </script>
+<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/sendmail.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+    <div class="slide-out-div">
+        <a class="handle" href="#">Контакт</a>
+        <h3>Акция от Aries.ck.ua</h3>
+        <p>Заполните, пожалуйста форму<br />и получите скидку 5% на ваш первый заказ
+        </p><br />
+        <form action="javascript:void(0)" id="contact-form" method="post">
+            <label for="name">Имя</label><span class="required">*</span><br />
+            <input type="text" size="40" name="name" id="name" class="validate[required]" /><br />
+
+            <label for="phone">Телефон</label><span class="required">*</span><br />
+            <input type="text" size="40" name="phone" id="phone" class="validate[required,custom[phone]]" /><br />
+
+            <label for="email">E-mail</label><span class="required">*</span><br />
+            <input type="text" size="40" name="email" id="email" class="validate[required,custom[email]]" /><br />
+            <button type="submit" name="submit" id="submit" value="OK" style="margin-top:15px;">Отправить</button>
+        </form>
+    </div>
 
 </body>
 </html>

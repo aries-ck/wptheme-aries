@@ -19,9 +19,12 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
@@ -29,7 +32,29 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.validationEngine-ru.js" type="text/javascript"></script>
+    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.validationEngine.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.6.3.min.js" type="text/javascript"></script>
+    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.tabSlideOut.v1.3.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.slide-out-div').tabSlideOut({
+                tabHandle: '.handle',                     //class of the element that will become your tab
+                pathToTabImage: '<?php bloginfo( 'stylesheet_directory' ); ?>/images/contact_tab.png', //path to the image for the tab //Optionally can be set using css
+                imageHeight: '160px',                     //height of tab image           //Optionally can be set using css
+                imageWidth: '40px',                       //width of tab image            //Optionally can be set using css
+                tabLocation: 'right',                      //side of screen where tab lives, top, right, bottom, or left
+                speed: 300,                               //speed of animation
+                action: 'click',                          //options: 'click' or 'hover', action to trigger animation
+                topPos: '200px',                          //position from the top/ use if tabLocation is left or right
+                leftPos: '20px',                          //position from left/ use if tabLocation is bottom or top
+                fixedPosition: true                      //options: true makes it stick(fixed position) on scroll
+            });
+
+        });
+
+    </script>
 </head>
 
 <body onload="initialize()" <?php body_class(); ?>>
