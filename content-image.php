@@ -7,7 +7,7 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-
+<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <h1><?php the_title(); ?></h1>
 		<div class="entry-content another">

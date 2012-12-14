@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<section id="primary" class="site-content">
 		<div id="content" role="main">
-
+            <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
 				<h1 class="archive-title"><?php printf( __( '%s', 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
