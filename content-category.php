@@ -8,23 +8,23 @@
  */
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <h2><?php the_title(); ?></h2>
-		<div class="entry-content another">
 			<?php
-            global $more;
-            $more = false;
-            var_dump(get_the_content( __( '', 'twentytwelve' ), false ));
-            $more = true;
+            $content = get_the_content( __( '', 'twentytwelve' ), false );
+            //Explode gallery
+            $aContent = explode('[gallery ids="', $content);
+            //True if gallery isset in the post
+            if (count($aContent) > 1) {
+                //Find first id at the gallery
+                $aContent = explode(',', $aContent[1]);
+                $aImg = wp_get_attachment_image_src($aContent[0]);
+                //Echo first image
+                echo "
+                    <div style='float: left; padding-right: 10px;'>
+                        <a href='".get_permalink()."'>
+                            <img src='".$aImg[0]."' style=''>
+                            <h3 align='center'>".the_title('','', false)."</h3>
+                        </a>
+                    </div>
+                ";
+            }
             ?>
-		</div><!-- .entry-content -->
-
-		<footer class="entry-meta">
-			<?php if ( comments_open() ) : ?>
-			<div class="comments-link">
-				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
-			</div><!-- .comments-link -->
-			<?php endif; // comments_open() ?>
-			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
-		</footer><!-- .entry-meta -->
-	</article><!-- #post -->
