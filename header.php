@@ -19,7 +19,9 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-
+<script type="text/javascript">
+   var templateUrl = '<?php bloginfo( 'stylesheet_directory' ); ?>';
+</script>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>

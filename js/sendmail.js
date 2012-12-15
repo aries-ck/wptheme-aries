@@ -21,7 +21,7 @@
 			if(use_ajax)
             {
 				$.ajax({
-					url: "mail.php",
+					url: templateUrl+"/mail.php",
 					type: "POST",
 					data: "name="+$('#name').val()+"&email="+$('#email').val()+"&phone="+$('#phone').val(),
 					dataType: "html",
