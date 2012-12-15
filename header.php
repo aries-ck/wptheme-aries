@@ -27,15 +27,17 @@
 <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
 
+
+    <script src="http://code.jquery.com/jquery-1.6.3.min.js" type="text/javascript"></script>
     <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.validationEngine-ru.js" type="text/javascript"></script>
     <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.validationEngine.js" type="text/javascript"></script>
-    <script src="http://code.jquery.com/jquery-1.6.3.min.js" type="text/javascript"></script>
     <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.tabSlideOut.v1.3.js"></script>
     <script type="text/javascript">
         $(function(){
@@ -59,11 +61,19 @@
 
 <body onload="initialize()" <?php body_class(); ?>>
 <div id="page" class="hfeed site">
+    <div id="alert">
+
+    </div>
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
+
+        <?php $header_image = get_header_image();
+        if ( ! empty( $header_image ) ) : ?>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+        <?php endif; ?>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
@@ -78,10 +88,7 @@
             ?>
 		</nav><!-- #site-navigation -->
 
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
+
 	</header><!-- #masthead -->
 
 	<div id="main" class="wrapper">

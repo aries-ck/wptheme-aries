@@ -12,7 +12,7 @@
 ?>
 
 	</div><!-- #main .wrapper -->
-<footer id="colophon" role="contentinfo" xmlns="http://www.w3.org/1999/html">
+<footer id="colophon" role="contentinfo">
     <div id="map_canvas" style="width:600px; height:200px; float: left"></div>
     <ul>
         <li>
@@ -31,12 +31,11 @@
             <span class="phone">(0472) 50-50-52</span><br />
         </li>
         <li>
-            <a href="mailto:Типография%20Aries%20&lt;aries@uch.net&gt;"><span class="mail">E-mail</span>
+            <a href="mailto:Типография%20Aries%20&lt;aries@uch.net&gt;"><span class="mail">E-mail</span></a>
         </li>
     </ul>
         <div class="site-info">
 			<?php do_action( 'twentytwelve_credits' ); ?>
-			<a hidden="true" href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
             <a href="<?php bloginfo( 'url' ); ?>" title="Типография Aries">© Рекламно полиграфичный центр Aries</a> |
             <a href="http://kotoblog.pp.ua" title="Сергей Полищук">Сергей Полищук</a>
 		</div><!-- .site-info -->
@@ -66,7 +65,6 @@
         });
     }
 </script>
-<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/sendmail.js"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 
@@ -87,6 +85,6 @@
             <button type="submit" name="submit" id="submit" value="OK" style="margin-top:15px;">Отправить</button>
         </form>
     </div>
-
+<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/sendmail.js"></script>
 </body>
 </html>
