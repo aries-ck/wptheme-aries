@@ -17,7 +17,7 @@
 		});
 		$("#submit").click(function(){
 
-			$("#contact-form").validationEngine('validate')
+			$("#contact-form").validationEngine('validate');
 			if(use_ajax)
             {
 				$.ajax({
@@ -27,10 +27,13 @@
 					dataType: "html",
 					timeout: 30000,
 					beforeSend: function(){
-						$("#system-message-container").html("<div align='center'><img src='templates/gk_mystore/images/loader.gif'></div>");
+						$(".alert").html("<div align='center'><img src='templates/gk_mystore/images/loader.gif'></div>");
 					},
 					success: function(answer){
-						$("#system-message-container").html(answer);
+						$("#alert").html(answer);
+                        $("#alert").show();
+                        $("#alert").css('margin-top', '10px');
+                        window.scrollTo(0, 0);
 						$(".handle").click()
 					},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
