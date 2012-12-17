@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-if (mail("spolischook@gmial.com", "Новый клиент на сайте aries.ck.ua", "Имя:".$_POST['name']."\nПочта:".$_POST['email']."\nТелефон:".$_POST['phone']))
+if (mail("spolischook@gmail.com", "Новый клиент на сайте aries.ck.ua", "Имя:".$_POST['name']."\nПочта:".$_POST['email']."\nТелефон:".$_POST['phone']))
     echo '
 	<div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" onclick="$(\'#alert\').hide()">×</button>
